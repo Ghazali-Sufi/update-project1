@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block body %}
+
+<h3>Search Results</h3>
+<div class="dropdown-divider"></div>
+
+<div class="container results-container">
+<h3></h3>
+    <div>
+        Searched For: {{ searchedFor }}  <br>
+        {% if message %}
+            <div>{{ message }}</div>
+        {% else %}
+            <div class="tile">
+                <table class="table is-striped is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Authors</th>
+                            <th>ISBN</th>
+                        </tr>
+                    </thead>
+                    {% for book in books %}
+                        <tr class="has-background-navy">
+                            <td><button class="button **is-large has-background-navy is-rounded**"><a href="{{ url_for('book', isbn=book['isbn']) }}" title="{{ book['title']}} ">{{ book["title"] }}</a></button></td>
+                            <td>{{ book["author"] }} </td>
+                            <td>{{ book["isbn"] }} </td>
+                        </tr>
+                    {% endfor %}    
+                </table>
+            </div>
+        {% endif %}
+    </div>         
+
+</div>
+{% endblock %}

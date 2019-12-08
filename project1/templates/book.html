@@ -1,0 +1,72 @@
+<!-- templates/book.html -->
+
+{% extends "layout.html" %}
+{% block title %} Detail {% endblock%}
+{% block body %}
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            {% if message %}
+                <div>{{ message }}</div>
+            {% else %}
+                <img src="http://covers.openlibrary.org/b/isbn/{{book.isbn}}.jpg" width="25%" alt="{{ book.title}}">
+                <h1 class="title">{{ book.title}}</h1> <br>
+                <h2 class="subtitle">Author: {{ book.author}}</h2>
+                <h2 class="subtitle">Publication: {{ book.year}}</h2>
+                <h2 class="subtitle">ISBN: {{ book.isbn}}</h2>
+
+                <!--REVIEWS-->
+                <h3>Reviews:</h3>
+                <div class="rating_local">
+                    {% for username, review in users %}
+                        <h5>{{ username }}</h5>
+                        <strong>Rating: </strong> {{ review.rating }} <br>
+                        <h6>Comment:</h6>
+                        <p>
+                            {{ review.comment }}
+                        </p>
+                    {% endfor %}
+            
+                </div>
+            
+                <br><h3>From Goodreads:</h3>
+                <p>
+                Total Number of Ratings : {{ ratings_count }} <br>
+                Average Rating : {{ average_rating }}<br>
+                </p>
+
+                <!-- Leave a review -->
+                <h1 class="title">Leave a review for this book</h1>
+                <form action="{{ url_for('review') }}" method="POST">
+                        <div class="field">
+                            <label class="label">Rating:</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="rating">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" name="comment" placeholder="Textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-link" type="submit">Submit</button>
+                            </div>
+                            </div>
+                        </div>
+                </form>
+            {% endif %}
+</div>
+    </div>
+</section>
+{% endblock %}

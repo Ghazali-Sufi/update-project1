@@ -1,0 +1,156 @@
+
+body{
+  background-image: url(registration-page-background-504-1.png);
+
+  height: 100vh;
+  background-size: cover;
+  background-position: 100px;
+  background-position: top;
+}
+
+ul{
+ float: right;
+  margin-right: 500px;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+ul li{
+	margin-right: 10px;
+
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  background-color: white;
+
+}
+
+ul li a{
+  text-decoration: none;
+  color:black;
+  padding: 5px 20px;
+
+  transition: 1s ease;
+
+}
+
+ul li a:hover{
+  background-color: #D8CCC9 ;
+  color:black;
+
+}
+
+#forms{
+  background: lightblue;
+  border-radius: 20px;
+  padding: 40px;
+  width: 400px;
+  height: 380px;
+}
+
+#forms h3{
+  margin-top: -30px;
+  margin-left:50px;
+  color: red;
+  text-align: center;
+  border: 2px solid green;
+  width: 300px;
+  border-radius: 4px;
+}
+
+#h1sign{
+  color: maroon;
+  padding-bottom: 30px;
+  margin-left: 150px;
+}
+
+#h1login{
+ color: maroon;
+  padding-bottom: 30px;
+  margin-left: 150px;
+}
+
+#login{
+  position: absolute;
+  top: 30%;
+  left: 480px;
+
+}
+
+#input{
+  border-radius: 8px;
+  width: 180px;
+  height: 30px;
+  font-size: 21px;
+
+}
+
+#label{
+  font-style: Times New Roman;
+  font-size: 23px;
+  color: maroon;
+}
+
+#input-email{
+  border-radius: 8px;
+  width: 240px;
+  height: 27px;
+  font-size: 17px;
+}
+
+#button{
+  border-radius: 8px;
+  margin-left: 145px;
+  width: 120px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+}
+
+/*#search_id{
+  margin-top: -400px;
+  margin-left: 570px;
+}*/
+
+/*search*/
+
+#srchdiv{
+  background-color: lightblue;
+  /* margin-top: -500px;
+  margin-left: 540px; */
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+}
+
+
+#srchdiv h2{
+  margin-left: 45px;
+}
+
+
+#srch{
+  margin-top: 60px;
+  margin-left: 60px;
+   border-radius: 8px;
+  width: 180px;
+  height: 30px;
+  font-size: 21px;
+}
+
+#srchbutton{
+  border-radius: 8px;
+  margin-left: 90px;
+  width: 120px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
+  /*margin-left: 400px;
+}*/

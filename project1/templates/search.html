@@ -1,0 +1,29 @@
+
+{% extends "layout.html" %}
+{% block heading %}
+
+{% endblock %}
+
+{% block body %}
+
+<!-- <div id="search_id">
+
+</div> -->
+
+
+<div id="srchdiv">
+	<h2 id="welcome">Welcome {{ username[0]|upper }}{{ username[1:] }}</h2>
+
+
+
+<form method="POST" action="{{url_for('search')}}">
+
+
+        <input type="text" id="srch" name="searchQuery" placeholder="search something" autofocus="" required><br/><br/><br/>
+
+        <button id="srchbutton">Search</button>
+
+      </form>
+       </div>
+
+{% endblock %}

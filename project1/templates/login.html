@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<form id="login" action="{{url_for('login')}}" method="post">
+	<div id="forms">
+		<h1 id="h1login">Login</h1>
+		<h4>{{message}}</h4>
+	<label id="label">Enter username</label>
+        <input type="text" id="input" name="username" placeholder="Enter Username"><br/><br/><br/><br/>
+
+        <label id="label">Enter Password</label>
+        <input type="Password" id="input" name="password" placeholder="Enter Password"><br/><br/><br/><br/>
+
+        <button id="button">Sign in</button>
+         </div>
+      </form>
+     
+
+{% endblock %}
